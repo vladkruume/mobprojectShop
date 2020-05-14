@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ProductKruume.MainMaso">
+    <ContentPage.Content >
+
+            <StackLayout Orientation="Vertical">
+                <Label Text="Мясо"/>
+                <Entry x:Name="masoname" IsEnabled="False"  Text="{Binding Name}" />
+                <Entry x:Name="imagemaso" IsVisible="False" Text="{Binding Image}" />
+                <Image x:Name="masoimage"/>
+                <Picker x:Name="picker"  SelectedIndexChanged="Picker_SelectedIndexChanged">
+                    <Picker.Items>
+                        <x:String>Говядина</x:String>
+                        <x:String>Свинина</x:String>
+                        <x:String>Курица</x:String>
+                        <x:String>Индейка</x:String>
+                        <x:String>Утка</x:String>
+                        <x:String>Рыба</x:String>
+                    </Picker.Items>
+                </Picker>
+            <Label Text="Количество товара"/>
+            <Stepper  Maximum="15"
+                Minimum="1" ValueChanged="Stepper_ValueChanged"
+                          x:Name="kol" BackgroundColor="#76A21E" Margin="0,0,230,0"/>
+            <Entry x:Name="showkol" IsEnabled="False" Text="{Binding Amaut}"/>
+
+            <Label Text="Всего:"/>
+            <Entry x:Name="masocena" IsEnabled="False" Text="{Binding Price}"/>
+            <Button Text="Заказать" Clicked="Button_Clicked" BackgroundColor="#76A21E"/>
+            <Button Text="Удалить" Clicked="Button_Clicked_1" BackgroundColor="#76A21E" />
+            <Entry x:Name="allcena" IsVisible="False" Text="{Binding Pricee}" />
+        </StackLayout >
+
+    </ContentPage.Content>
+</ContentPage>

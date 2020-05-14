@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProductKruume.MainPage">
+    <StackLayout>
+        <Label Text="Магазин Rini" Opacity="0.9" Margin="150, 20, 50, 0" TextColor="#161313"  FontAttributes="Bold,Italic" HeightRequest="70" FontSize="Large" TextDecorations="Underline"/>
+        <StackLayout Orientation="Horizontal">
+            
+            <Button BackgroundColor="#76A21E" TextColor="#560D0D" HeightRequest="70" Opacity = "0.8"  FontSize = "Medium" Text = "Категории" Margin="70, 50, 70, 0" Clicked="Btnz_ClickedAsync"/>
+            <Button BackgroundColor="#76A21E" TextColor="#560D0D" HeightRequest="70" Opacity = "0.8"  FontSize = "Medium" Text = "Корзина" Margin="70, 50, 70, 0" Clicked="Btnt_ClickedAsync"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
